@@ -6,6 +6,7 @@ export function gerarCards(){
     app = document.getElementById("app");
     app.textContent = "";
     for (let index = 1; index <= 5; index++) {
+        alert("entrou no for")
         let div = document.createElement("div");
         div.id = `card${index}`;
         alert(index);
