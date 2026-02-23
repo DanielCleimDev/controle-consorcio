@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoobyGoody Taty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>BoobyGoody Taty</h1>
+
+    <nav><button id="gerarCards">Gerar Cardis</button></nav>
+
+    <section id="salvarNum">
+
+        <section class="input">
+            <label for="salvaNum">Dados</label>
+            <input type="text" id="salvaNum" placeholder="Informe o Número">
+        </section>
+        <section class="radio">
+            <input type="radio" id="sorteado" name="tipoStatus" value="sorteado">
+            <label for="sorteado" class="sorteado">Sorteado</label><br>
+            <input type="radio" id="cancelado" name="tipoStatus" value="cancelado">
+            <label for="cancelado" class="cancelado">Cancelado</label><br>
+            <input type="radio" id="lanceLivre" name="tipoStatus" value="lanceLivre">
+            <label for="lanceLivre" class="lanceLivre">Lance Livre</label>
+            <input type="radio" id="lance25" name="tipoStatus" value="lance25">
+            <label for="lance25" class="lance25">Lance 25</label>
+            <input type="radio" id="lance50" name="tipoStatus" value="lance50">
+            <label for="lance50" class="lance50">Lance 50</label>
+        </section>
+        <button id="btnSalvar">Salvar Dados</button>
+    </section>
+
+    <main id="app" class="principal"></main>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

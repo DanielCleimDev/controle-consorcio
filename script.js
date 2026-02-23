@@ -1,0 +1,31 @@
+import { gerarCards } from "./gerarCards.js";
+import { salvaDados } from "./salvaDados.js";
+import { setLocalStorage } from "./setLocalStorage.js";
+import { verificaChave } from "./verificaChave.js";
+
+const btGerarCards = document.getElementById("gerarCards");
+btGerarCards.addEventListener("click", ()=> console.log(gerarCards()));
+
+const btnSalvar = document.getElementById('btnSalvar');
+
+btnSalvar.addEventListener('click', () => salvaDados());
+
+if(!verificaChave("iniciado")){
+    console.log("Entrou")
+    const sorteados = [4238, 1002, 1723, 478, 861, 3340, 1129, 4492, 1372, 1350];
+    const cancelados = [648, 1011, 2276, 3331, 862, 812, 1161, 775, 3401, 3383, 1129, 4492, 1372, 2711];
+    const lanceLivre = [4357, 1073, 378, 1745, 4754, 1711, 2065, 2454, 4070, 159, 4398, 3984, 2551, 2776, 269, 4896, 4160, 708, 864, 1565, 3146, 2905, 1378, 2555, 518, 2345, 37, 2717, 4937, 2389, 769, 3327, 3950, 209, 2656, 2726, 2207, 3920, 142, 1178, 671, 2106, 1363, 3674, 622, 2547];
+    const lance25 = [4240, 4236, 4242, 4243, 1004, 1005, 1008, 989, 1020, 981, 2229, 2236, 2237, 2226, 2224, 2223, 2222, 481, 482, 489, 490, 494, 860, 853, 870, 852, 851, 849, 874, 848, 3405, 3406, 3409, 3410, 3392, 3391, 3419, 3382, 1297, 1302, 1303, 1305, 1293, 1292, 1291, 1290, 1289, 1310, 1288, 1287, 4494, 4490, 4498, 4500, 4483, 4479, 4507, 4512, 4513, 4471, 4470, 4467, 4518, 1374, 1375, 1369, 1367, 1364, 1362, 1384, 1359, 1358, 1387, 1388, 1389, 1348, 1346, 1357, 1341, 1338, 1335, 1322, 1318, 1315, 1311, 1394, 1395];
+    const lance50 = [4231, 4280, 1014, 943, 921, 1097, 1122, 2215, 2304, 2153, 2227,  2135, 2124, 483, 461, 500, 451, 446, 526, 551, 876, 785, 774, 752, 3386, 3342, 3318, 3504, 3549, 3219, 1283, 1316, 1263, 1257, 1228,  1371, 1207, 1171, 1163, 1150, 1145, 1486, 4468, 4462, 4451, 4546, 4404, 4377, 4610, 4613, 1377, 1344, 1320, 1425, 1489, 1494, 1495, 1499, 1239, 1218, 1492, 1183, 1108, 1079, 1630, 1642, 1647, 1051, 1043];
+
+    sorteados.forEach(numero => setLocalStorage(numero, "sorteado"));
+    cancelados.forEach(numero => setLocalStorage(numero, "cancelado"));
+    lanceLivre.forEach(numero => setLocalStorage(numero, "lanceLivre"));
+    lance25.forEach(numero => setLocalStorage(numero, "lance25"));
+    lance50.forEach(numero => setLocalStorage(numero, "lance50"));
+
+    setLocalStorage("iniciado", true);
+}
+
+
+
