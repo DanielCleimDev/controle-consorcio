@@ -3,7 +3,8 @@ import { verificaChave } from "./verificaChave.js";
 
 export function iniciado(){
     
-    if(!verificaChave("iniciado")){
+    
+    if(!verificaChave("iniciado2")){
         
         const sorteados = [4238, 1002, 1723, 478, 861, 3340, 1129, 4492, 1372, 1350];
         const cancelados = [648, 1011, 2276, 3331, 862, 812, 1161, 775, 3401, 3383, 1129, 4492, 1372, 2711];
@@ -16,6 +17,8 @@ export function iniciado(){
         lanceLivre.forEach(numero => setLocalStorage(numero, "lanceLivre"));
         lance25.forEach(numero => setLocalStorage(numero, "lance25"));
         lance50.forEach(numero => setLocalStorage(numero, "lance50"));
+        
+        setLocalStorage(2139,"nossoNum");
 
         setLocalStorage("iniciado", true);
     }

@@ -42,5 +42,26 @@
     .radio label{
         padding: 0.3rem;
     }
+    .radio{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items:baseline
+    }
+    .nossoNum{
+        animation: piscarSuave 1s ease-in-out infinite;
+    }
+
+    @keyframes piscarSuave {
+  0% {
+    background-color: gray; 
+  }
+  50% {
+    background-color: aqua;
+  }
+  100% {
+    background-color: gray; 
+  }
+}
 
     
