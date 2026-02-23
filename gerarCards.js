@@ -4,6 +4,7 @@ import { verificaChave } from "./verificaChave.js";
 export function gerarCards(){
     
     app = document.getElementById("app");
+    app.textContent = "";
     for (let index = 1; index <= 5000; index++) {
         let div = document.createElement("div");
         div.id = `card${index}`;

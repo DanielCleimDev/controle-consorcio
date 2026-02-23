@@ -1,3 +1,4 @@
+import { gerarCards } from "./gerarCards.js";
 import { setLocalStorage } from "./setLocalStorage.js";
 
 export function salvaDados(){
@@ -5,7 +6,7 @@ export function salvaDados(){
     const radioSelecionado = document.querySelector('input[name="tipoStatus"]:checked');
 
     //validação
-    if (numeroInformado === "") {
+    if (numeroInformado.value == "") {
         alert("Por favor, informe o número.");
         return;
     }
@@ -15,12 +16,15 @@ export function salvaDados(){
         return;
     }
 
-    console.log("Número:", numeroInformado.value);
-    console.log("Opção Selecionada:", radioSelecionado.value);
-
+    if(radioSelecionado.value == "limpar"){
+        localStorage.removeItem(numeroInformado.value);
+        alert("Número apagado");
+    }else{
+        setLocalStorage(numeroInformado.value, radioSelecionado.value);
+        alert("Dados capturados e salvos!");
+    }
     
-    setLocalStorage(numeroInformado.value, radioSelecionado.value);
-    alert("Dados capturados e salvos!");
     numeroInformado.value = "";
     radioSelecionado.checked = false;
+    gerarCards();
 }
