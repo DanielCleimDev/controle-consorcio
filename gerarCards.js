@@ -23,4 +23,5 @@ export function gerarCards(){
         div.textContent = String(index).padStart(4,'0');
         app.appendChild(div)
     }
+    alert("depois do for")
 }
