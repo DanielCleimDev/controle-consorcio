@@ -2,7 +2,7 @@ import { getLocalStorage } from "./getLocalStorage.js";
 import { verificaChave } from "./verificaChave.js";
 
 export function gerarCards(){
-    
+    alert("iniciou");
     app = document.getElementById("app");
     app.textContent = "";
     for (let index = 1; index <= 5000; index++) {
